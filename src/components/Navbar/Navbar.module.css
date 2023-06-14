@@ -1,0 +1,5 @@
+.font {
+    font-size: var(--big-font-size);
+    font-family: var(--body-font);
+    color: aquamarine;
+}
