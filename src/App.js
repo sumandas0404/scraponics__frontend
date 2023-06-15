@@ -10,11 +10,9 @@ import Signup from './pages/Signup';
 import './App.css';
 
 
-
 const App = () => {
     return (
         <div>
-            <h1>hellow</h1>
             <div className="routes">
                 <Routes>
                     <Route exact path='/' element={<Home />} />
