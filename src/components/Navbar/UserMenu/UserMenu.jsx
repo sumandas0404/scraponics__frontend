@@ -42,7 +42,6 @@ const UserMenu = () => {
 
           </div>
         )}
-
     </div>
   )
 }
