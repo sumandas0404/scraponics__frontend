@@ -46,6 +46,7 @@ body {
   padding: 0;
   font-family: var(--body-font);
   scroll-behavior: smooth;
+  /* overflow-x: hidden; */
 }
 
 /* scroll bar styles */

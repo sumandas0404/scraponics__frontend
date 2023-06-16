@@ -40,12 +40,6 @@ const Homecard = () => {
           </div>
         </div>
       </div>
-
-      <div className={classes.test}>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae velit dolore consequatur sunt impedit voluptas nemo facilis aliquam recusandae excepturi.
-        </p>
-      </div>
     </>
   )
 }
