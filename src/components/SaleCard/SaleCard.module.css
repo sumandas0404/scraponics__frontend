@@ -7,7 +7,7 @@
     height: 50vh;
 }
 
-form {
+.form {
     height: 95%;
     width: 500px;
     background-color: #57C5B6;
@@ -24,7 +24,7 @@ form {
 }
 
 .form__group {
-    margin-bottom: 1rem;
+    margin-bottom: .2rem;
 }
 
 .form__control {

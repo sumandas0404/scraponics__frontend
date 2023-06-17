@@ -15,7 +15,7 @@ const SaleCard = () => {
         <div className={classes.saleCard}>
 
 
-            <form>
+            <form className={classes.form}>
                 <h1>Sell Your Scraps</h1>
                 {/* scrap name */}
                 <div className={classes.form__group}>
