@@ -112,7 +112,7 @@ const SignupIndUserComp = () => {
 
           {/* details submit */}
           <div className={classes.form__group}>
-            <button className={classes.form__submit} type='submit'>Sell</button>
+            <button className={classes.form__submit} type='submit'>Sign Up</button>
           </div>
         </form>
       </div>
