@@ -29,11 +29,11 @@ const Sidebar = () => {
             <VscOrganization className={classes.icon} />
             <p>Vendors List</p>
           </div>
-          <div className={classes.pageBlock}>
+          <div className={classes.pageBlock} onClick={() => navigate('/dashboardpublic/transactions')}>
             <GrTransaction className={classes.icon} />
             <p>Transactions</p>
           </div>
-          <div className={classes.pageBlock}>
+          <div className={classes.pageBlock} onClick={() => navigate('/dashboardpublic/geography')}>
             <GiEarthAfricaEurope className={classes.icon} />
             <p>Geography</p>
           </div>

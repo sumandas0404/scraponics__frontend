@@ -6,8 +6,11 @@ import MenuItem from '../MenuItem/MenuItem';
 import { AiOutlineMenu } from 'react-icons/ai';
 
 import classes from './UserMenu.module.css';
+import { useNavigate } from 'react-router-dom';
 
 const UserMenu = () => {
+
+  const navigate = useNavigate();
 
   const [isOpen, setIsOpen] = useState(false);
 
