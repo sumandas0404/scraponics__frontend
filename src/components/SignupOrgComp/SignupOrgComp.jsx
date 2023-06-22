@@ -3,15 +3,14 @@ import React, { useState } from 'react';
 import signupImage from '../../assets/signup.png';
 
 // styles 
-import classes from './SignupIndUserComp.module.css';
+import classes from './SignupOrgComp.module.css';
 
-const SignupIndUserComp = () => {
+const SignupOrgComp = () => {
 
   const [userDetails, setUserDetails] = useState({
     name: '',
     email: '',
     phoneNumber: '',
-    gstNumber: '',
     profilePicture: '',
     address: {
       landmark: '',
@@ -25,7 +24,7 @@ const SignupIndUserComp = () => {
   return (
     <div className={classes.signup}>
       <div className={classes.header}>
-        <h1 className={classes.heading}>Register as a SCRAPONICS user</h1>
+        <h1 className={classes.heading}>Register as a Scrap Seller Organisation</h1>
       </div>
 
       <div className={classes.formContainer}>
@@ -53,6 +52,15 @@ const SignupIndUserComp = () => {
             <p className={classes.label}>Phone Number : </p>
             <div className={classes.form__group}>
               <input type="n" className={classes.form__phonenumber} name='user phone number' placeholder='Enter your phone number' value={userDetails.phoneNumber} onChange={() => { }} />
+            </div>
+          </div>
+
+          
+          {/* user gst number */}
+          <div className={classes.inputwrapper}>
+            <p className={classes.label}>GST Number : </p>
+            <div className={classes.form__group}>
+              <input type="n" className={classes.form__phonenumber} name='Enter GST number' placeholder='Enter your GST number' value={userDetails.gstNumber} onChange={() => { }} />
             </div>
           </div>
 
@@ -104,7 +112,7 @@ const SignupIndUserComp = () => {
           <div className={classes.inputwrapper}>
             <p className={classes.label}>Password : </p>
             <div className={classes.form__group}>
-              <input type="password" className={classes.form__name} name='password' placeholder='Enter your password' value={userDetails.address.district} autoComplete='on' onChange={() => { }} />
+              <input type="password" className={classes.form__name} name='password' placeholder='Enter your password' value={userDetails.address.district} onChange={() => { }} />
             </div>
           </div>
 
@@ -121,4 +129,4 @@ const SignupIndUserComp = () => {
   )
 }
 
-export default SignupIndUserComp;
+export default SignupOrgComp;

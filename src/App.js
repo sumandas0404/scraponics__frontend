@@ -4,8 +4,12 @@ import { Route, Routes } from 'react-router-dom';
 // pages
 import Home from './pages/Home';
 import LoginIndUser from './pages/LoginIndUser';
+import LoginOrg from './pages/LoginOrg';
+import LoginVendor from './pages/LoginVendor';
 import SignupIndUser from './pages/SignupIndUser';
+import SignupOrg from './pages/SignupOrg';
 import DashboardPublic from './pages/DashboardPublic';
+import SignupVendor from './pages/SignupVendor';
 import RatePage from './pages/RatePage';
 
 // styles
@@ -21,6 +25,10 @@ const App = () => {
                     <Route exact path='/rate' element={<RatePage />} />
                     <Route exact path='/logininduser' element={<LoginIndUser />} />
                     <Route exact path='/signupinduser' element={<SignupIndUser />} />
+                    <Route exact path='/loginorg' element={<LoginOrg />} />
+                    <Route exact path='/signuporg' element={<SignupOrg />} />
+                    <Route exact path='/loginvendor' element={<LoginVendor />} />
+                    <Route exact path='/signupvendor' element={<SignupVendor />} />
                     <Route exact path='/dashboardpublic/*' element={<DashboardPublic />} />
                 </Routes>
             </div>
