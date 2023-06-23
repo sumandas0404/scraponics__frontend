@@ -13,7 +13,7 @@ const DashboardPublic = () => {
     <div>
       <Sidebar />
       <Routes>
-        <Route exact path='/overview' element={<Dashboard />} />
+        <Route exact path='/' element={<Dashboard />} />
         <Route exact path='/vendorlist' element={<VendorList />} />
         <Route exact path='/geography' element={<Geography />} />
         <Route exact path='/transactions' element={<Transactions />} />

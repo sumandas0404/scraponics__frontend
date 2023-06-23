@@ -4,47 +4,54 @@ import { BiUpArrowAlt } from 'react-icons/bi';
 import { AiFillStar } from 'react-icons/ai';
 
 // styles
-import classes from './VendorList.module.css'
+import classes from './VendorList.module.css';
+
+const data = [
+  {
+    name: "scraponics",
+    state: "assam",
+    about: "  data in React:",
+    rating: "4",
+    status: "active"
+  },
+  {
+    name: "scraponics",
+    state: "assam",
+    about: "  to map data in React:",
+    rating: "4",
+    status: "close"
+  },
+  {
+    name: "scraponics",
+    state: "assam",
+    about: " p data in React:",
+    rating: "4",
+    status: "active"
+  },
+  {
+    name: "scraponics",
+    state: "goa",
+    about: " Here' in React:",
+    rating: "4",
+    status: "active"
+  },
+  {
+    name: "scraponics",
+    state: "assam",
+    about: " Here'sow to map data in React:",
+    rating: "4",
+    status: "active"
+  }
+];
 
 const VendorList = () => {
 
-  const [data, setData] = useState([
-    {
-      name: "scraponics",
-      state: "Assam",
-      about: "  data in React:",
-      rating: "4",
-      status: "active"
-    },
-    {
-      name: "scraponics",
-      state: "Assam",
-      about: "  to map data in React:",
-      rating: "4",
-      status: "close"
-    },
-    {
-      name: "scraponics",
-      state: "Assam",
-      about: " p data in React:",
-      rating: "4",
-      status: "active"
-    },
-    {
-      name: "scraponics",
-      state: "Assam",
-      about: " Here' in React:",
-      rating: "4",
-      status: "active"
-    },
-    {
-      name: "scraponics",
-      state: "Assam",
-      about: " Here'sow to map data in React:",
-      rating: "4",
-      status: "active"
-    }
-  ]) 
+  const [selectedOption, setSelectedOption] = useState("");
+
+
+
+
+
 
   return (
     <div className={classes.vendorList}>
@@ -83,6 +90,17 @@ const VendorList = () => {
         </div>
       </div>
 
+      <div className={classes.filterContainer}>
+        <p>Search By States : </p>
+        <div>
+          <select className={classes.selectForm} value={selectedOption} onChange={(event) => setSelectedOption(event.target.value)}>
+            <option value="assam">assam</option>
+            <option value="arunachal">arunachal</option>
+            <option value="goa">goa</option>
+          </select>
+        </div>
+      </div>
+
 
       {/* list : { vendor, state, about, rating, status} */}
       <div className={classes.table}>
@@ -94,15 +112,19 @@ const VendorList = () => {
           <p className={classes.status}>Status</p>
         </div>
 
-        {data.map((data, index) => (
-          <div key={index} className={classes.tableContent}>
-          <p className={classes.name}>{data.name}</p>
-          <p className={classes.state}>{data.state}</p>
-          <p className={classes.about}>{data.about}</p>
-          <p className={classes.rating}>{data.rating} <AiFillStar /></p>
-          <p className={classes.status}>{data.status}</p>
-          </div>
-        ))}
+        {data.map((data, index) => {
+          if (data.state === selectedOption) {
+            return (
+              <div key={index} className={classes.tableContent}>
+                <p className={classes.name}>{data.name}</p>
+                <p className={classes.state}>{data.state}</p>
+                <p className={classes.about}>{data.about}</p>
+                <p className={classes.rating}>{data.rating} <AiFillStar /></p>
+                <p className={classes.status}>{data.status}</p>
+              </div>
+            )
+          }
+        })}
       </div>
 
 

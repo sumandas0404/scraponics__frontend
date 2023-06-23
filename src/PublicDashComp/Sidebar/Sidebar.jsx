@@ -21,7 +21,7 @@ const Sidebar = () => {
         </div>
         <div className={classes.mainMenu}>
           <h1 className={classes.blockHeading}>MAIN MENU</h1>
-          <div className={classes.pageBlock} onClick={() => navigate('/dashboardpublic/overview')}>
+          <div className={classes.pageBlock} onClick={() => navigate('/dashboardpublic/')}>
             <TbHomeStats className={classes.icon} />
             <p>Overview</p>
           </div>

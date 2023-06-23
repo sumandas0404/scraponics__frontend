@@ -62,6 +62,15 @@ const NavItems = () => {
                     Resources
                 </div>
 
+                <Link to="/dashboardpublic" style={{
+                    textDecoration: "none",
+                    color: "#111"
+                }}>
+                    <div className={classes.item2}>
+                        Public Dashboard
+                    </div>
+                </Link>
+
                 <div className={classes.item3}>
                     About
                 </div>
