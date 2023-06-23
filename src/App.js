@@ -11,9 +11,6 @@ import SignupOrg from "./pages/SignupOrg";
 import DashboardPublic from "./pages/DashboardPublic";
 import SignupVendor from "./pages/SignupVendor";
 import RatePage from "./pages/RatePage";
-import ServicePageUser from "./pages/ServicePage";
-import ServicePageVendor from "./pages/ServicePageVendor";
-import ServicePageGovt from "./pages/ServicePageGovt";
 import Resource from "./pages/Resource";
 
 // styles
@@ -38,9 +35,6 @@ const App = () => {
             path="/dashboardpublic/*"
             element={<DashboardPublic />}
           />
-          <Route exact path="/serviceuser" element={<ServicePageUser />} />
-          <Route exact path="/servicevendor" element={<ServicePageVendor />} />
-          <Route exact path="/servicegovt" element={<ServicePageGovt />} />
         </Routes>
       </div>
     </div>
