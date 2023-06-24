@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 // styles
 import classes from './SaleCard.module.css';
 
-const SaleCard = () => {
+const scrapData = {
+    name: 'scrap name',
+    category: 'category',
+    photo: 'photo'
+};
 
-    const [scrapData, setScrapData] = useState({
-        name: 'scrap name',
-        category: 'category',
-        photo: 'photo'
-    });
+const SaleCard = () => {
 
     return (
         <div className={classes.saleCard}>
