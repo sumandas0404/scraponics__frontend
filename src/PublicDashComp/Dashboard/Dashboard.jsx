@@ -29,34 +29,34 @@ const Dashboard = () => {
               </div>
               <div className={classes.statContainer}>
                 <div className={classes.box1}>
-                  <p>Total Customers</p>
+                  <p>Today transactions</p>
                   <RiCustomerService2Line className={classes.icon} />
                 </div>
-                <p className={classes.number}>127618</p>
+                <p className={classes.number}>12 tons</p>
                 <div className={classes.box1}>
                   <p>+14%</p>
-                  <p>than last month</p>
+                  <p>than yesterday</p>
                 </div>
               </div>
             </div>
             <div>
               <div className={classes.statContainer}>
                 <div className={classes.box1}>
-                  <p>Total Customers</p>
+                  <p>Weekly Transactions</p>
                   <RiCustomerService2Line className={classes.icon} />
                 </div>
-                <p className={classes.number}>127618</p>
+                <p className={classes.number}>1k tons</p>
                 <div className={classes.box1}>
-                  <p>+14%</p>
-                  <p>than last month</p>
+                  <p>+16%</p>
+                  <p>than last week</p>
                 </div>
               </div>
               <div className={classes.statContainer}>
                 <div className={classes.box1}>
-                  <p>Total Customers</p>
+                  <p>Monthly Transactions</p>
                   <RiCustomerService2Line className={classes.icon} />
                 </div>
-                <p className={classes.number}>127618</p>
+                <p className={classes.number}>4k tons</p>
                 <div className={classes.box1}>
                   <p>+14%</p>
                   <p>than last month</p>
