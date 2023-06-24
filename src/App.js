@@ -8,9 +8,10 @@ import LoginOrg from './pages/LoginOrg';
 import LoginVendor from './pages/LoginVendor';
 import SignupIndUser from './pages/SignupIndUser';
 import SignupOrg from './pages/SignupOrg';
-import DashboardPublic from './pages/DashboardPublic';
 import SignupVendor from './pages/SignupVendor';
 import RatePage from './pages/RatePage';
+import DashboardPublic from './pages/DashboardPublic';
+import DashboardUser from './pages/DashboardUser';
 
 // styles
 import './App.css';
@@ -30,6 +31,7 @@ const App = () => {
                     <Route exact path='/loginvendor' element={<LoginVendor />} />
                     <Route exact path='/signupvendor' element={<SignupVendor />} />
                     <Route exact path='/dashboardpublic/*' element={<DashboardPublic />} />
+                    <Route exact path='/dashboarduser/*' element={<DashboardUser />} />
                 </Routes>
             </div>
         </div>
