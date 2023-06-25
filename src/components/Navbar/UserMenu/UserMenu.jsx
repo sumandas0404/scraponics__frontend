@@ -12,11 +12,22 @@ import { Link } from 'react-router-dom';
 const UserMenu = () => {
 
   const [isOpen, setIsOpen] = useState(false);
+  const [isLoginOpen, setIsLoginOpen] = useState(false);
+  const [isSignupOpen, setIsSignupOpen] = useState(false);
 
   const toggleOpen = useCallback(() => {
     setIsOpen((value) => !value);
   }, []);
 
+
+  const toggleLogin = useCallback(() => {
+    setIsLoginOpen((value) => !value);
+  }, []);
+
+
+  const toggleSignup = useCallback(() => {
+    setIsSignupOpen((value) => !value);
+  }, []);
 
   return (
     <div className={classes.usermenu}>
@@ -38,45 +49,32 @@ const UserMenu = () => {
 
           <div className={classes.dropdownContent}>
             <>
-              <Link to="/logininduser" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="Login as User" />
-              </Link>
-              <Link to="/signupinduser" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="SignUp as User" />
-              </Link>
-              <Link to="/loginorg" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="Login as Org" />
-              </Link>
-              <Link to="/signuporg" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="SignUp as Org" />
-              </Link>
-              <Link to="/loginvendor" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="Login as Vendor" />
-              </Link>
-              <Link to="/signupvendor" style={{
-                textDecoration: "none",
-                color: "#111"
-              }}>
-                <MenuItem label="SignUp as Vendor" />
-              </Link>
+              {!isSignupOpen &&
+                <div onClick={toggleLogin}>
+                  <MenuItem label="Log In" />
+                  {isLoginOpen && (
+                    <div>
+                      <MenuItem label="User" />
+                      <MenuItem label="Organisaction" />
+                      <MenuItem label="Vendor" />
+                    </div>
+                  )}
+                </div>
+              }
+              {!isLoginOpen &&
+                <div onClick={toggleSignup}>
+                  <MenuItem label="Sign Up" />
+                  {isSignupOpen && (
+                    <div>
+                      <MenuItem label="User" />
+                      <MenuItem label="Organisaction" />
+                      <MenuItem label="Vendor" />
+                    </div>
+                  )}
+                </div>
+              }
             </>
           </div>
-
         </div>
       )}
     </div>

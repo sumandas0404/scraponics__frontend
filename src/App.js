@@ -12,6 +12,7 @@ import SignupVendor from './pages/SignupVendor';
 import RatePage from './pages/RatePage';
 import DashboardPublic from './pages/DashboardPublic';
 import DashboardUser from './pages/DashboardUser';
+import DashboardVendor from './pages/DashboardVendor';
 
 // styles
 import './App.css';
@@ -32,6 +33,7 @@ const App = () => {
                     <Route exact path='/signupvendor' element={<SignupVendor />} />
                     <Route exact path='/dashboardpublic/*' element={<DashboardPublic />} />
                     <Route exact path='/dashboarduser/*' element={<DashboardUser />} />
+                    <Route exact path='/dashboardvendor/*' element={<DashboardVendor />} />
                 </Routes>
             </div>
         </div>
