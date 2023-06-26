@@ -1,11 +1,46 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import { RiCustomerService2Line } from 'react-icons/ri';
 
 // styles 
 import classes from './Dashboard.module.css';
 
+const data = [
+    {
+        name: "scraponics",
+        price: "120",
+        address: "Dibrugarh, Chabua, 786184",
+        date: "12-12-12",
+    },
+    {
+        name: "scraponics",
+        price: "120",
+        address: "Dibrugarh, Chabua, 786184",
+        date: "12-12-12",
+    },
+    {
+        name: "scraponics",
+        price: "120",
+        address: "Dibrugarh, Chabua, 786184",
+        date: "12-12-12",
+    },
+    {
+        name: "scraponics",
+        price: "120",
+        address: "Dibrugarh, Chabua, 786184",
+        date: "12-12-12",
+    },
+    {
+        name: "scraponics",
+        price: "120",
+        address: "Dibrugarh, Chabua, 786184",
+        date: "12-12-12",
+    },
+];
+
 const Dashboard = () => {
+    const [selectedOption, setSelectedOption] = useState("");
+
     return (
         <div className={classes.dashboard}>
             <h1 className={classes.heading}>Dashboard</h1>
@@ -63,7 +98,35 @@ const Dashboard = () => {
                     </div>
                 </div>
                 <div className={classes.rightSide}>
+                    <h1 className={classes.heading}>Scraps Deals nearby you</h1>
+                    <div className={classes.filterContainer}>
+                        <p>Sort by location : </p>
+                        <div>
+                            <select className={classes.selectForm} value={selectedOption} onChange={(event) => setSelectedOption(event.target.value)}>
+                                <option value="price">Dibrugarh</option>
+                                <option value="date">Tinsukia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div className={classes.table}>
+                        <div className={classes.tableHeading}>
+                            <p className={classes.name}>Scrap name</p>
+                            <p className={classes.price}>Price</p>
+                            <p className={classes.address}>Address</p>
+                            <p className={classes.date}>Date</p>
+                            <p className={classes.details}>Details</p>
+                        </div>
 
+                        {data.map((data, index) => (
+                            <div key={index} className={classes.tableContent}>
+                                <p className={classes.name}>{data.name}</p>
+                                <p className={classes.price}>{data.price}</p>
+                                <p className={classes.address}>{data.address}</p>
+                                <p className={classes.date}>{data.date}</p>
+                                <p className={classes.details}>Details</p>
+                            </div>
+                        ))}
+                    </div>
                 </div>
             </div>
         </div>
