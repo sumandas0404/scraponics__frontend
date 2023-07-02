@@ -29,13 +29,6 @@ function Res() {
           placeholder="Search For Your Answers "
           onClick={(e) => setQuery(e.target.value)}
         ></input>
-        {/* <label>
-          <img
-            src={search}
-            alt="Search Icon"
-            style={{ width: 30, height: 20 }}
-          />
-        </label> */}
         <div className={classes.cardcontainer}>
           <img src={resourcelogo} alt="Resource" />
           <h3>Resources</h3>
@@ -165,7 +158,7 @@ function Res() {
               <span className={classes.icon}>
                 <BsBook />
               </span>
-              <span className={classes.text}>Education Materials</span>
+              <span className={classes.text}>Awareness</span>
             </a>
           </li>
         </ul>
