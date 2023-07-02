@@ -6,6 +6,7 @@
 }
 .maindiv {
   background-color: #f3f3f3;
+  margin-top: 80px;
 }
 /* Side Bar */
 .sidebar {
@@ -77,6 +78,7 @@
   text-transform: uppercase;
   color: #fff;
   width: 400px;
+  height: 50px;
   background: #0c573f;
   border-radius: 15px;
   margin-bottom: 10px;
@@ -85,6 +87,7 @@
 .maintext h1 {
   font-weight: 500;
   font-style: oblique;
+  font-size: larger;
 }
 .maincontainer input {
   margin-top: 50px;
