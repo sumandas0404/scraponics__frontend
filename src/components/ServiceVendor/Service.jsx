@@ -1,15 +1,15 @@
 import React from 'react'
 import image from '../../assets/vendor.png';
 // styles
-import './Service.css';
+import classes from './Service.module.css';
 
 const Service = () => {
     return (
-        <div className='main-container'>
+        <div className={classes.maincontainer}>
 
       
-        <div className="service component__space" id="Services">
-            <div className="heading">
+        <div className={`${classes.service} ${classes.component__space}`} id="Services">
+            <div className={classes.heading}>
                 <h1>Vendor</h1> 
 
                
@@ -17,20 +17,20 @@ const Service = () => {
                
             </div>
 
-            <div className="container">
+            <div className={classes.container}>
        
 
                 {/* main-box */}
-                <div className='main-box'>
-                    <div className='box1'>
+                <div className={classes.mainbox}>
+                    <div className={classes.box1}>
                             
                                 {/* box1 */}
-                                <div className="row">
+                                <div className={classes.row}>
 
 
-                                    <div className="col__3">
-                                        <div className="service__box pointer">
-                                            <div className="icon">
+                                    <div className={classes.col__3}>
+                                        <div className={`${classes.service__box}`}>
+                                            <div className={classes.icon}>
                                             <svg
                                                 stroke="currentColor"
                                                 fill="none"
@@ -46,9 +46,9 @@ const Service = () => {
                                             <line x1="2" y1="20" x2="2" y2="20"></line>
                                             </svg>
                                             </div>
-                                            <div className="service__meta">
-                                                <h1 className="service__text">SERVICE 1</h1>
-                                                <p className="p service__text p__color">
+                                            <div className={classes.service__meta}>
+                                                <h1 className={classes.service__text}>Purchase Users</h1>
+                                                <p className={`${classes.p} ${classes.service__text} ${classes.p__color}`}>
                                                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, distinctio.
                                                 </p>
                                         
@@ -56,9 +56,9 @@ const Service = () => {
                                         </div>
                                     </div>
 
-                                    <div className="col__3">
-                                        <div className="service__box pointer">
-                                            <div className="icon">
+                                    <div className={classes.col__3}>
+                                        <div className={`${classes.service__box}`}>
+                                            <div className={classes.icon}>
                                             <svg
                                                 stroke="currentColor"
                                                 fill="none"
@@ -75,9 +75,9 @@ const Service = () => {
                                             <polyline points="2 12 12 17 22 12"></polyline>
                                             </svg>
                                             </div>
-                                            <div className="service__meta">
-                                                <h1 className="service__text">SERVICE 2</h1>
-                                                <p className="p service__text p__color">
+                                            <div className={classes.service__meta}>
+                                                <h1 className={classes.service__text}>Selling Users</h1>
+                                                <p className={`${classes.p} ${classes.service__text} ${classes.p__color}`}>
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, distinctio.
                                                 </p>
                                                 
@@ -85,9 +85,9 @@ const Service = () => {
                                         </div>
                                     </div>
 
-                                    <div className="col__3">
-                                        <div className="service__box pointer">
-                                            <div className="icon">
+                                    <div className={classes.col__3}>
+                                        <div className={`${classes.service__box}`}>
+                                            <div className={classes.icon}>
                                             <svg
                                                 stroke="currentColor"
                                                 fill="none"
@@ -105,9 +105,9 @@ const Service = () => {
                                                 <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
                                                 </svg>
                                             </div>
-                                            <div className="service__meta">
-                                                <h1 className="service__text">SERVICE 3</h1>
-                                                <p className="p service__text p__color">
+                                            <div className={classes.service__meta}>
+                                                <h1 className={classes.service__text}>Statewise Vendors Info</h1>
+                                                <p className={`${classes.p} ${classes.service__text} ${classes.p__color}`}>
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, distinctio.
                                                 </p>
                                                 
@@ -115,9 +115,9 @@ const Service = () => {
                                         </div>
                                     </div>
 
-                                    <div className="col__3">
-                                        <div className="service__box pointer">
-                                            <div className="icon">
+                                    <div className={classes.col__3}>
+                                        <div className={`${classes.service__box}`}>
+                                            <div className={classes.icon}>
                                             <svg
                                                 stroke="currentColor"
                                                 fill="none"
@@ -134,9 +134,9 @@ const Service = () => {
                                                 <line x1="12" y1="17" x2="12" y2="21"></line>
                                                 </svg>
                                             </div>
-                                            <div className="service__meta">
-                                                <h1 className="service__text">SERVICE 4</h1>
-                                                <p className="p service__text p__color">
+                                            <div className={classes.service__meta}>
+                                                <h1 className={classes.service__text}>Integrate Platform</h1>
+                                                <p className={`${classes.p} ${classes.service__text} ${classes.p__color}`}>
                                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime, distinctio.
                                                 </p>
                                                 
@@ -150,8 +150,8 @@ const Service = () => {
 
 
                     </div>
-                    <div className='box2'>
-                        <img className='service-img' src={image} alt="service" />
+                    <div className={classes.box2}>
+                        <img className={classes.serviceimg} src={image} alt="service" />
                         
                     </div>
                 </div>
