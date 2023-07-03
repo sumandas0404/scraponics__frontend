@@ -8,7 +8,8 @@ const SaleCard = () => {
     const [scrapData, setScrapData] = useState({
         name: 'scrap name',
         category: 'category',
-        photo: 'photo'
+        photo: 'photo',
+        description: 'Add Description'
     });
 
     return (
@@ -36,11 +37,14 @@ const SaleCard = () => {
                 <div className={classes.form__group}>
                     <input className={classes.form__file} type="file" placeholder='upload scrap image' />
                 </div>
-
+                <div className={classes.form__group}>
+                    <input type="text" className={classes.form__control} name='Description' placeholder='Description' value={scrapData.description} onChange={() => {}} />
+                </div>
                 {/* details submit */}
                 <div className={classes.form__group}>
                     <button className={classes.form__submit} type='submit'>Sell</button>
                 </div>
+                
             </form>
 
         </div>

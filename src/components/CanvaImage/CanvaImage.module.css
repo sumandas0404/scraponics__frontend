@@ -2,3 +2,19 @@
     height: 100vh;
     background-image: linear-gradient(to bottom right, #E0E4FA, #57CC99);
 }
+.imgcontainer{
+    height: 100%;
+    width: 100%;
+    position: relative;
+
+}
+.homeimage{
+    height: 85%;
+    width: 85%;
+    position: absolute;
+    left: 120px;
+    top: 90px;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    
+}

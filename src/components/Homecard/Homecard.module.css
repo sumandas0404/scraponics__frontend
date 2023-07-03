@@ -11,7 +11,8 @@
 .innerBox {
     position: relative;
     width: 90vw;
-    height: 60vh;
+    height: 68vh;
+    top: 80px;
     background-image: linear-gradient(to bottom right, #E0E4FA, #c9f8e4);
     border-radius: 2rem;
     box-shadow: #57CC99 0px 2px 5px -1px, #57CC99 0px 1px 3px -1px;
@@ -19,12 +20,12 @@
 
 .upperBox {
     width: 80vw;
-    height: 50vh;
+    height: 58vh;
     background: white;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     border-radius: 2rem;
     position: absolute;
-    top: -10%;
+    top: -20%;
     left: 6%;
 
     display: flex;
@@ -34,7 +35,7 @@
 }
 
 .homeImage {
-    height: 50vh;
+    height: 65vh;
 }
 
 .lowerBox {
@@ -46,7 +47,7 @@
     border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
     position: absolute;
-    bottom: -30%;
+    bottom: -20%;
     left: 6%;
 
 
