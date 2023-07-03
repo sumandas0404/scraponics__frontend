@@ -54,7 +54,12 @@ const UserMenu = () => {
                   <MenuItem label="Log In" />
                   {isLoginOpen && (
                     <div>
-                      <MenuItem label="User" />
+                      <Link to='/logininduser' style={{
+                        textDecoration: "none",
+                        color: "#111",
+                      }}>
+                        <MenuItem label="individual" />
+                      </Link>
                       <MenuItem label="Organisaction" />
                       <MenuItem label="Vendor" />
                     </div>
@@ -66,7 +71,12 @@ const UserMenu = () => {
                   <MenuItem label="Sign Up" />
                   {isSignupOpen && (
                     <div>
-                      <MenuItem label="User" />
+                      <Link to='/signupinduser' style={{
+                        textDecoration: "none",
+                        color: "#111",
+                      }}>
+                        <MenuItem label="individual" />
+                      </Link>
                       <MenuItem label="Organisaction" />
                       <MenuItem label="Vendor" />
                     </div>
