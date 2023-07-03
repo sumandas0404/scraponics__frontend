@@ -1,5 +1,6 @@
-import React from 'react'
+import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import useAuthStore from '../../store/store';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { LuShoppingCart } from 'react-icons/lu';
 import { AiOutlineSetting, AiOutlineHistory } from 'react-icons/ai'; 
@@ -14,6 +15,10 @@ const Sidebar = () => {
   const user = {
     name: "John Wick"
   }
+
+  const { userProfile } = useAuthStore();
+
+  console.log(userProfile);
 
 
   const navigate = useNavigate();

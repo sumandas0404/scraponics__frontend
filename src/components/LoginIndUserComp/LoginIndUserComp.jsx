@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import useAuthStore from '../../store/store';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
@@ -9,6 +10,7 @@ import classes from './LoginIndUserComp.module.css';
 const url = "http://localhost:5000/auth/logininduser";
 
 const LoginIndUserComp = () => {
+  const { addUser } = useAuthStore();
 
   const [userDetails, setUserDetails] = useState({
     email: '',
@@ -21,6 +23,7 @@ const LoginIndUserComp = () => {
   const loginIndividualUser = async (user) => {
     try {
       const userXYZ = await axios.post(url, user);
+      addUser(userXYZ[0]);
 
       if (userXYZ) {
         setCondition(false);
