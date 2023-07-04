@@ -6,6 +6,8 @@ const authStore = (set) => ({
     userProfile: null,
 
     addUser: (user) => set({ userProfile: user }),
+
+    removeUser: () => set({ userProfile: null })
 })
 
 const useAuthStore = create(

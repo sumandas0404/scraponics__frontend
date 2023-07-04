@@ -11,14 +11,7 @@ import userImage from '../../assets/placeholder.jpg';
 import classes from './Sidebar.module.css';
 
 const Sidebar = () => {
-
-  const user = {
-    name: "John Wick"
-  }
-
   const { userProfile } = useAuthStore();
-
-  console.log(userProfile);
 
 
   const navigate = useNavigate();
@@ -27,8 +20,8 @@ const Sidebar = () => {
     <div className={classes.sidebar}>
       <div className={classes.container}>
         <div className={classes.header}>
-          <img className={classes.logo} src={userImage} alt="scraponics" onClick={() => navigate('/')} />
-          <h1 className={classes.heading}>{user.name}</h1>
+          <img className={classes.logo} src={userProfile.profilePicture} alt="scraponics" onClick={() => navigate('/')} />
+          <h1 className={classes.heading}>{userProfile.name}</h1>
         </div>
         <div className={classes.mainMenu}>
           <h1 className={classes.blockHeading}>MAIN MENU</h1>
