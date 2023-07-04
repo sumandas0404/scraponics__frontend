@@ -134,6 +134,11 @@
     background-color: #22577A;
 }
 
+.form__submit:disabled {
+    background: silver;
+    pointer-events: none;
+}
+
 .successfullContainer {
     width: 100%;
     display: flex;

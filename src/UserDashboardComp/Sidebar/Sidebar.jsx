@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import useAuthStore from '../../store/store';
+import { useSelector } from 'react-redux';
 import { AiOutlineDashboard } from 'react-icons/ai';
 import { LuShoppingCart } from 'react-icons/lu';
 import { AiOutlineSetting, AiOutlineHistory } from 'react-icons/ai'; 
@@ -11,7 +11,7 @@ import userImage from '../../assets/placeholder.jpg';
 import classes from './Sidebar.module.css';
 
 const Sidebar = () => {
-  const { userProfile } = useAuthStore();
+  const userProfile = useSelector((state) => state.authReducer.authData);
 
 
   const navigate = useNavigate();
@@ -20,8 +20,8 @@ const Sidebar = () => {
     <div className={classes.sidebar}>
       <div className={classes.container}>
         <div className={classes.header}>
-          <img className={classes.logo} src={userProfile.profilePicture} alt="scraponics" onClick={() => navigate('/')} />
-          <h1 className={classes.heading}>{userProfile.name}</h1>
+          <img className={classes.logo} src={userProfile[0].profilePicture || userImage} alt="scraponics" onClick={() => navigate('/')} />
+          <h1 className={classes.heading}>{userProfile[0].name}</h1>
         </div>
         <div className={classes.mainMenu}>
           <h1 className={classes.blockHeading}>MAIN MENU</h1>

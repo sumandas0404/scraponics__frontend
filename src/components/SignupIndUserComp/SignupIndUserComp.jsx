@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux'
+import { signUp } from '../../actions/AuthActions';
 
-import signupImage from '../../assets/signup.png';
 
 // styles 
+import signupImage from '../../assets/signup.png';
 import classes from './SignupIndUserComp.module.css';
 
-const url = "http://localhost:5000/auth/signupinduser";
-
 const SignupIndUserComp = () => {
+
+  const dispatch = useDispatch();
+
+  const loading = useSelector((state) => state.authReducer.loading);
 
   const [userDetails, setUserDetails] = useState({
     name: '',
@@ -25,18 +28,6 @@ const SignupIndUserComp = () => {
 
   const [condition, setCondition] = useState(true);
 
-  const creatInvidualUser = async (newUser) => {
-    try {
-      const user = await axios.post(url, newUser);
-
-      if (user) {
-        setCondition(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
-
   const handleChange = (e) => {
     setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
   };
@@ -44,13 +35,12 @@ const SignupIndUserComp = () => {
   const handleFileUpload = async (e) => {
     const file = e.target.files[0];
     const base64 = await convertToBase64(file);
-    console.log(base64)
     setUserDetails({ ...userDetails, profilePicture: base64 })
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    creatInvidualUser(userDetails);
+    dispatch(signUp(userDetails));
     console.log("Registered");
   }
 
@@ -217,7 +207,13 @@ const SignupIndUserComp = () => {
             </Link>
             {/* details submit */}
             <div className={classes.form__group}>
-              <button className={classes.form__submit} type='submit'>Sign Up</button>
+              <button className={classes.form__submit} type='submit'>
+                {loading ?
+                  <p>Loading</p>
+                  :
+                  <p>Sign Up</p>
+                }
+              </button>
             </div>
           </form>
           :

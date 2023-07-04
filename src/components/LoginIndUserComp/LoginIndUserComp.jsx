@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import useAuthStore from '../../store/store';
-import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { logIn } from '../../actions/AuthActions';
 
 // styles
 import loginImage from '../../assets/login.png'
 import classes from './LoginIndUserComp.module.css';
 
-const url = "http://localhost:5000/auth/logininduser";
-
 const LoginIndUserComp = () => {
-
-  const { addUser } = useAuthStore();
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const loading = useSelector((state) => state.authReducer.loading);
 
   const [userDetails, setUserDetails] = useState({
     email: '',
@@ -21,17 +21,6 @@ const LoginIndUserComp = () => {
 
   const [condition, setCondition] = useState(true);
 
-  const loginIndividualUser = async (user) => {
-    try {
-      const details = await axios.post(url, user);
-      if (details.status === 200) {
-        addUser(details.data[0]);
-        setCondition(false);
-      }
-    } catch (error) {
-      console.log(error);
-    }
-  }
 
   const handleChange = (e) => {
     setUserDetails({ ...userDetails, [e.target.name]: e.target.value });
@@ -39,7 +28,7 @@ const LoginIndUserComp = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    loginIndividualUser(userDetails);
+    dispatch(logIn(userDetails, navigate));
     console.log("log in successfully");
   }
 
@@ -107,7 +96,13 @@ const LoginIndUserComp = () => {
             </Link>
             {/* details submit */}
             <div className={classes.form__group}>
-              <button className={classes.form__submit} type='submit'>Login</button>
+              <button className={classes.form__submit} type='submit' disabled={loading}>
+                {loading ?
+                  <p>Loading</p>
+                  :
+                  <p>Log In</p>
+                }
+              </button>
             </div>
           </form>
           :
